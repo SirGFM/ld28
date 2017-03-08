@@ -1,0 +1,16 @@
+objs.Hero,1,1
+objs.helpers.Exit,20,1,1,3,12
+objs.Bat,13,2,left
+objs.Help,19,2,right
+objs.Bat,6,3,left
+objs.Bat,12,8,right
+objs.helpers.LavaEmitter,1,13
+objs.helpers.LavaEmitter,2,13
+objs.helpers.LavaEmitter,5,13
+objs.helpers.LavaEmitter,7,13
+objs.helpers.LavaEmitter,8,13
+objs.helpers.LavaEmitter,11,13
+objs.helpers.LavaEmitter,12,13
+objs.helpers.LavaEmitter,13,13
+objs.helpers.LavaEmitter,16,13
+objs.helpers.LavaEmitter,17,13

@@ -1,0 +1,7 @@
+objs.Button,2,4,bt1
+objs.Button,5,4,bt2
+objs.Cage,6,6
+objs.Cage,14,6
+objs.He,7,8
+objs.She,15,8
+objs.Hero,0,13
