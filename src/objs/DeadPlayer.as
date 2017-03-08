@@ -23,7 +23,7 @@ package objs {
 				angle = 90;
 			}
 			
-			if (alpha > 0.8)
+			if (alpha > 0.65)
 				alpha -= FlxG.elapsed;
 			
 			if (touching & DOWN) {
@@ -38,15 +38,22 @@ package objs {
 			
 			gfx.hero(this);
 			height -= 4;
-			play("def");
+			
+			play("def", true);
+			updateAnimation();
 			
 			iniY = Y;
 			velocity.y = -75;
 			acceleration.y = grav;
 			alpha = 1;
 			
-			reg.onHitEmitter.at(this);
-			reg.onHitEmitter.emitParticle();
+			if (reg.particlesEnabled) {
+				reg.onHitEmitter.at(this);
+				reg.onHitEmitter.emitParticle();
+			}
+			
+			touching = 0;
+			wasTouching = 0;
 			
 			if (facing == RIGHT) {
 				velocity.x = -25;
@@ -56,6 +63,7 @@ package objs {
 				velocity.x = 25;
 				angularVelocity = 225;
 			}
+			active = true;
 		}
 	}
 }

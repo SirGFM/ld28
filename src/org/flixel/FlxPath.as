@@ -25,7 +25,7 @@ package org.flixel
 		public var debugColor:uint;
 		/**
 		 * Specify a debug display scroll factor for the path.  Default is (1,1).
-		 * NOTE: does not affect world movement!  Object scroll factors take care of that.
+		 * N.OTE: does not affect world movement!  Object scroll factors take care of that.
 		 */
 		public var debugScrollFactor:FlxPoint;
 		/**
@@ -137,7 +137,7 @@ package org.flixel
 		
 		/**
 		 * Remove a node from the path.
-		 * NOTE: only works with points added by reference or with references from <code>nodes</code> itself!
+		 * N.OTE: only works with points added by reference or with references from <code>nodes</code> itself!
 		 * 
 		 * @param	Node	The point object you want to remove from the path.
 		 * 

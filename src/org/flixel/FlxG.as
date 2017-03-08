@@ -279,7 +279,7 @@ package org.flixel
 		/**
 		 * How many times you want your game to update each second.
 		 * More updates usually means better collisions and smoother motion.
-		 * NOTE: This is NOT the same thing as the Flash Player framerate!
+		 * N.OTE: This is NOT the same thing as the Flash Player framerate!
 		 */
 		static public function get framerate():Number
 		{
@@ -299,7 +299,7 @@ package org.flixel
 		/**
 		 * How many times you want your game to update each second.
 		 * More updates usually means better collisions and smoother motion.
-		 * NOTE: This is NOT the same thing as the Flash Player framerate!
+		 * N.OTE: This is NOT the same thing as the Flash Player framerate!
 		 */
 		static public function get flashFramerate():Number
 		{
@@ -536,7 +536,7 @@ package org.flixel
 		
 		/**
 		 * Creates a new sound object from an embedded <code>Class</code> object.
-		 * NOTE: Just calls FlxG.loadSound() with AutoPlay == true.
+		 * N.OTE: Just calls FlxG.loadSound() with AutoPlay == true.
 		 * 
 		 * @param	EmbeddedSound	The sound you want to play.
 		 * @param	Volume			How loud to play it (0 to 1).
@@ -552,7 +552,7 @@ package org.flixel
 		
 		/**
 		 * Creates a new sound object from a URL.
-		 * NOTE: Just calls FlxG.loadSound() with AutoPlay == true.
+		 * N.OTE: Just calls FlxG.loadSound() with AutoPlay == true.
 		 * 
 		 * @param	URL		The URL of the sound you want to play.
 		 * @param	Volume	How loud to play it (0 to 1).

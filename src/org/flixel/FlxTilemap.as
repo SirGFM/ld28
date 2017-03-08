@@ -575,7 +575,7 @@ package org.flixel
 		
 		/**
 		 * Pathfinding helper function, floods a grid with distance information until it finds the end point.
-		 * NOTE: Currently this process does NOT use any kind of fancy heuristic!  It's pretty brute.
+		 * N.OTE: Currently this process does NOT use any kind of fancy heuristic!  It's pretty brute.
 		 * 
 		 * @param	StartIndex	The starting tile's map index.
 		 * @param	EndIndex	The ending tile's map index.

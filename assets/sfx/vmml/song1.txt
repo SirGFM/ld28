@@ -1,0 +1,44 @@
+t155
+
+// [melody]
+l8 %1 @4
+
+$
+o5 [r1]6
+// intro
+e>a<ce4 r4.
+e>a<ce4 r4.
+// main
+[e>a|<c]3 [d>g|b-<]3 [c>f|a<]3 [dc>g<]2 de
+[[e|>a<c]3 c d4r>g4b<d>g< [c>f|a<]3 d>g<cd4cdc]
+
+// [/melody]
+;
+
+// [bass]
+l8 o4 %1 @8 q6
+
+$
+// intro
+[a<eee4ee4>]2 [g<ddd4dd4>]2 f<ccc4cc4> g<ddd4dd4>
+// melody intro
+[a<eee4ee4>]2
+// main base
+[a<eee4ee4> g<ddd4dd4> f<ccc4cc4> g<ddd4dd4>]3
+
+// [/bass]
+;
+
+// [percurssion]
+// bass  // snare // hihat
+#Q=o7 a; #W=o5 a; #E=o4 e;
+
+#A=QrQr WrQr QrQr WrEr;
+#B=QrQr WrQr QrQr Wrrr;
+#C=QrQr WrQr QrQr WWWr;
+
+l16 %1 @9 q1
+$[B]7 A [B]4 [A]7 C
+
+// [/percurssion]
+;

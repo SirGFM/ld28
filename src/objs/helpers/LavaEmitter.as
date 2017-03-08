@@ -25,6 +25,7 @@ package objs.helpers {
 			timer -= FlxG.elapsed;
 			if (timer <= 0) {
 				reg.lavaEmitter.at(this);
+				reg.lavaEmitter.explode(0.5, reg.particlesQuantity/2 + FlxG.random() * reg.particlesRandom);
 				reg.lavaEmitter.start(true, 0.5, 0, FlxG.random() * 10 + 3);
 				sfx.lava();
 				timer += FlxG.random() * 2.5 + 0.5;
@@ -37,6 +38,8 @@ package objs.helpers {
 			timer = 0;
 			allowCollisions = NONE;
 			visible = false;
+			if (!reg.particlesEnabled)
+				kill();
 		}
 	}
 }

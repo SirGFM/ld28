@@ -565,8 +565,10 @@ package org.flixel.system
 					//Execute callback functions if they exist
 					if((_processingCallback == null) || _processingCallback(_object,checkObject))
 						overlapProcessed = true;
-					if(overlapProcessed && (_notifyCallback != null))
+					if(overlapProcessed && (_notifyCallback != null)) {
 						_notifyCallback(_object,checkObject);
+						overlapProcessed = false;
+					}
 				}
 				_iterator = _iterator.next;
 			}

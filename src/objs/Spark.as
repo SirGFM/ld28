@@ -47,7 +47,7 @@ package objs {
 			super.recycle(argc, argv);
 			gfx.spark(this);
 			
-			var tmp:String = (argv[3] as String);
+			var tmp:String = (argv[4] as String);
 			if (tmp.substr(0, 4) == "left")
 				facing = LEFT;
 			else if (tmp.substr(0, 5) == "right")

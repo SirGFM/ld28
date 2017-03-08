@@ -504,7 +504,7 @@ package org.flixel
 			return Velocity;
 		}
 		
-		//*** NOTE: THESE LAST THREE FUNCTIONS REQUIRE FLXPOINT ***//
+		//*** N.OTE: THESE LAST THREE FUNCTIONS REQUIRE FLXPOINT ***//
 		
 		/**
 		 * Rotates a point in 2D space around another point by the given angle.

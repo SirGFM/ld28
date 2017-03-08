@@ -34,7 +34,7 @@ package org.flixel
 		
 		/**
 		 * Change the size of your sprite's graphic.
-		 * NOTE: Scale doesn't currently affect collisions automatically,
+		 * N.OTE: Scale doesn't currently affect collisions automatically,
 		 * you will need to adjust the width, height and offset manually.
 		 * WARNING: scaling sprites decreases rendering performance for this sprite by a factor of 10x!
 		 */
@@ -56,12 +56,12 @@ package org.flixel
 		public var finished:Boolean;
 		/**
 		 * The width of the actual graphic or image being displayed (not necessarily the game object/bounding box).
-		 * NOTE: Edit at your own risk!!  This is intended to be read-only.
+		 * N.OTE: Edit at your own risk!!  This is intended to be read-only.
 		 */
 		public var frameWidth:uint;
 		/**
 		 * The height of the actual graphic or image being displayed (not necessarily the game object/bounding box).
-		 * NOTE: Edit at your own risk!!  This is intended to be read-only.
+		 * N.OTE: Edit at your own risk!!  This is intended to be read-only.
 		 */
 		public var frameHeight:uint;
 		/**
@@ -74,7 +74,7 @@ package org.flixel
 		public var framePixels:BitmapData;
 		/**
 		 * Set this flag to true to force the sprite to update during the draw() call.
-		 * NOTE: Rarely if ever necessary, most sprite operations will flip this flag automatically.
+		 * N.OTE: Rarely if ever necessary, most sprite operations will flip this flag automatically.
 		 */
 		public var dirty:Boolean;
 		

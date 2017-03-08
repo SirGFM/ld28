@@ -22,10 +22,9 @@ package objs {
 			x += 2;
 			y += 7;
 			
+			immovable = true;
 			pressed = false;
 			gfx.button(this);
-			if (argc == 4)
-				strid = argv[3];
 		}
 	}
 }

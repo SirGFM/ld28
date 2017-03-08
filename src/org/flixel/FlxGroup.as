@@ -2,7 +2,7 @@ package org.flixel
 {
 	/**
 	 * This is an organizational class that can update and render a bunch of <code>FlxBasic</code>s.
-	 * NOTE: Although <code>FlxGroup</code> extends <code>FlxBasic</code>, it will not automatically
+	 * N.OTE: Although <code>FlxGroup</code> extends <code>FlxBasic</code>, it will not automatically
 	 * add itself to the global collisions quad tree, it will only add its members.
 	 * 
 	 * @author	Adam Atomic
@@ -33,7 +33,7 @@ package org.flixel
 		 * Internal tracker for the maximum capacity of the group.
 		 * Default is 0, or no max capacity.
 		 */
-		protected var _maxSize:uint;
+		public var _maxSize:uint;
 		/**
 		 * Internal helper variable for recycling objects a la <code>FlxEmitter</code>.
 		 */

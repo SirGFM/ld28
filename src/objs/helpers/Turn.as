@@ -8,7 +8,7 @@ package objs.helpers {
 	 */
 	public class Turn extends FlxObject {
 		
-		public var direction:uint;
+		private var _direction:uint;
 		
 		public function Turn() {
 			super();
@@ -20,6 +20,17 @@ package objs.helpers {
 			super.reset(X, Y);
 			visible = false;
 			active = false;
+		}
+		
+		public function get direction():uint {
+			return _direction;
+		}
+		public function set direction(val:uint):void {
+			_direction = val;
+			if (val == RIGHT)
+				x += 2;
+			else if (val == LEFT)
+				x -= 2;
 		}
 	}
 }

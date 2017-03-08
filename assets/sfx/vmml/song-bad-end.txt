@@ -1,0 +1,33 @@
+
+t180
+
+// [bass]
+@2 o4 l4
+
+drr2 r2ag arr2 r1
+drr2 r2aga r2. r1
+
+dr l2 agferc>a<
+dr4g r. r1
+
+
+; // [/bass]
+
+// [melody]
+
+#TABLE 2 { (100, 48)8, (64, 12)8 };
+
+@0 o6 l4 na2
+
+r2ar a2r2
+r2gagfec
+
+r2ar a2r2
+r2ab<cdc>b
+
+rdag agfe frgr d2c2
+rdav5gv16a2r2
+fgec
+
+
+; // [melody]

@@ -47,12 +47,12 @@ package org.flixel
 		public var particleDrag:FlxPoint;
 		/**
 		 * The minimum possible angular velocity of a particle.  The default value is -360.
-		 * NOTE: rotating particles are more expensive to draw than non-rotating ones!
+		 * N.OTE: rotating particles are more expensive to draw than non-rotating ones!
 		 */
 		public var minRotation:Number;
 		/**
 		 * The maximum possible angular velocity of a particle.  The default value is 360.
-		 * NOTE: rotating particles are more expensive to draw than non-rotating ones!
+		 * N.OTE: rotating particles are more expensive to draw than non-rotating ones!
 		 */
 		public var maxRotation:Number;
 		/**
@@ -376,6 +376,25 @@ package org.flixel
 			Object.getMidpoint(_point);
 			x = _point.x - (width>>1);
 			y = _point.y - (height>>1);
+		}
+		
+		public function explode(Lifespan:Number=0, Quantity:uint=0):void {
+			revive();
+			visible = true;
+			
+			lifespan = Lifespan;
+			
+			_timer = 0;
+			
+			var i:uint = 0;
+			var l:uint = Quantity;
+			if((l <= 0) || (l > length))
+				l = length;
+			while(i < l)
+			{
+				emitParticle();
+				i++;
+			}
 		}
 	}
 }

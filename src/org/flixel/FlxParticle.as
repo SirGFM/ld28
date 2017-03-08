@@ -15,7 +15,7 @@ package org.flixel
 	{
 		/**
 		 * How long this particle lives before it disappears.
-		 * NOTE: this is a maximum, not a minimum; the object
+		 * N.OTE: this is a maximum, not a minimum; the object
 		 * could get recycled before its lifespan is up.
 		 */
 		public var lifespan:Number;

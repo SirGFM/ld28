@@ -1,0 +1,8 @@
+objs.Bat,1,3,Bat,left
+objs.Bat,18,2,Bat,left
+objs.helpers.Turn,18,13,Turn,left
+objs.helpers.Turn,1,13,Turn,right
+objs.Snake,4,13,Snake,left
+objs.Snake,8,13,Snake,left
+objs.Snake,10,13,Snake,left
+objs.RedSnake,13,13,RedSnake,left

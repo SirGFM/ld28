@@ -1,0 +1,17 @@
+
+#TABLE 0 { (128,32)8 (64,0)8 (32,0)8 (16,0)8 (8,0)8 };
+
+// [melody]
+t 67
+%1 @6 o5 na0
+l4 ad g16*a16*a4.
+l8 a<c>bg g16*a16*a4 r8
+l4 ad >b16*<c16*c4.
+l8 dcfe c16*d16*d4 r8
+
+l4 gdg2
+l8 d>a+<dc>a+4.< r8
+l4 gdc2
+l8 dcfe d4. r8
+
+// [/melody]

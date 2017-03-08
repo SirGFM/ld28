@@ -1,2 +1,0 @@
-objs.Hero,8,11
-objs.Help,19,12,right

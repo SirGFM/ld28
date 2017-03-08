@@ -204,7 +204,7 @@ package org.flixel.system.input
 		
 		/**
 		 * Fetch the world position of the mouse on any given camera.
-		 * NOTE: Mouse.x and Mouse.y also store the world position of the mouse cursor on the main camera.
+		 * N.OTE: Mouse.x and Mouse.y also store the world position of the mouse cursor on the main camera.
 		 * 
 		 * @param Camera	If unspecified, first/main global camera is used instead.
 		 * @param Point		An existing point object to store the results (if you don't want a new one created). 
@@ -225,7 +225,7 @@ package org.flixel.system.input
 		
 		/**
 		 * Fetch the screen position of the mouse on any given camera.
-		 * NOTE: Mouse.screenX and Mouse.screenY also store the screen position of the mouse cursor on the main camera.
+		 * N.OTE: Mouse.screenX and Mouse.screenY also store the screen position of the mouse cursor on the main camera.
 		 * 
 		 * @param Camera	If unspecified, first/main global camera is used instead.
 		 * @param Point		An existing point object to store the results (if you don't want a new one created). 

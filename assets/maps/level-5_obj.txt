@@ -1,4 +1,0 @@
-objs.Bat,13,9,left
-objs.Hero,19,13
-objs.helpers.Exit,1,15,2,1,6
-objs.Help,2,14,right

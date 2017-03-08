@@ -1,0 +1,4 @@
+objs.Hero,19,3,Hero
+objs.helpers.Exit,-1,9,Exit,left,1,3,10
+objs.Bat,7,4,Bat,right
+objs.helpers.Exit,20,1,Exit,right,1,3,8

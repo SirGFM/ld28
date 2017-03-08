@@ -7,6 +7,8 @@ package objs {
 	 */
 	public class Platform extends Basic {
 		
+		// TODO fix graphic direction
+		
 		private var _activated:Boolean;
 		private var max:int;
 		
@@ -21,7 +23,6 @@ package objs {
 			if (_activated) {
 				if (acc < 1) {
 					acc += add;
-					return;
 				}
 				while(acc >= 1) {
 					acc -= 1;
@@ -30,10 +31,16 @@ package objs {
 						sfx.platform();
 					
 					width += 1;
+					if (facing == LEFT) {
+						x--;
+						last.x = x;
+					}
 					if (width % 16 == 0)
 						width += 0;
-					if (int(width / 16) == max)
+					if (int(width / 16) >= max) {
+						width = max * 16;
 						_activated = false;
+					}
 				}
 			}
 		}
@@ -46,25 +53,48 @@ package objs {
 			
 			var _x:int = x;
 			
-			_flashRect.width = 4;
-			super.draw();
-			x += 4;
-			_flashRect.x = 4;
-			_flashRect.width = 8;
-			while (x + _flashRect.width < _x + width - 4) {
+			if (facing == RIGHT) {
+				_flashRect.width = 4;
 				super.draw();
-				x += _flashRect.width;
-			}
-			if (x < _x + width - 4) {
-				_flashRect.width = (_x + width - 4) - x;
+				x += 4;
+				_flashRect.x = 4;
+				_flashRect.width = 8;
+				while (x + _flashRect.width < _x + width - 4) {
+					super.draw();
+					x += _flashRect.width;
+				}
+				if (x < _x + width - 4) {
+					_flashRect.width = (_x + width - 4) - x;
+					super.draw();
+				}
+				x = _x + width - 4;
+				_flashRect.x = 12;
+				_flashRect.width = 4;
 				super.draw();
+				_flashRect.x = 0;
+				_flashRect.width = 16;
 			}
-			x = _x + width - 4;
-			_flashRect.x = 12;
-			_flashRect.width = 4;
-			super.draw();
-			_flashRect.x = 0;
-			_flashRect.width = 16;
+			else if (facing == LEFT) {
+				_flashRect.width = 4;
+				super.draw();
+				x += 4;
+				_flashRect.x = 4;
+				_flashRect.width = 8;
+				while (x + _flashRect.width < _x + width - 4) {
+					super.draw();
+					x += _flashRect.width;
+				}
+				if (x < _x + width - 4) {
+					_flashRect.width = (_x + width - 4) - x;
+					super.draw();
+				}
+				x = _x + width - 4;
+				_flashRect.x = 12;
+				_flashRect.width = 4;
+				super.draw();
+				_flashRect.x = 0;
+				_flashRect.width = 16;
+			}
 			
 			x = _x;
 		}
@@ -78,17 +108,30 @@ package objs {
 			super.recycle(argc, argv);
 			gfx.platform(this);
 			
+			immovable = true;
 			_activated = false;
 			max = 0;
 			acc = 0;
 			
-			if (argc > 3)
-				max = int(argv[3]);
-			if (argc > 4)
-				strid = argv[4];
-			if (argc > 5) {
-				var time:int = int(argv[5] as String);
-				add = max * 16 * FlxG.elapsed / time;
+			if (argc > 4) {
+				var str:String = argv[4];
+				if (str == "left")
+					facing = LEFT;
+				else if (str == "right")
+					facing = RIGHT;
+			}
+			if (argc > 5)
+				max = int(argv[5]);
+			if (argc > 6) {
+				var time:int = int(argv[6] as String);
+				if (time != 1) {
+					time--;
+					add = max * 16 * FlxG.elapsed / time;
+				}
+				else {
+					add = max * 16 * FlxG.elapsed / time;
+					add *= 2;
+				}
 			}
 			else
 				add = 1;

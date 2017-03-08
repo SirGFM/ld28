@@ -1,5 +1,6 @@
 package org.flixel
 {	
+	import utils.Saver;
 	/**
 	 * This is a useful "generic" Flixel object.
 	 * Both <code>FlxObject</code> and <code>FlxGroup</code> extend this class,
@@ -9,6 +10,8 @@ package org.flixel
 	 */
 	public class FlxBasic
 	{
+		static protected const saver:Saver = Saver.self;
+		
 		static internal var _ACTIVECOUNT:uint;
 		static internal var _VISIBLECOUNT:uint;
 

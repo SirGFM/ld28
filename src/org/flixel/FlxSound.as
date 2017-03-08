@@ -255,7 +255,7 @@ package org.flixel
 			stop();
 			createSound();
 			_sound = new EmbeddedSound();
-			//NOTE: can't pull ID3 info from embedded sound currently
+			//N.OTE: can't pull ID3 info from embedded sound currently
 			_looped = Looped;
 			updateTransform();
 			exists = true;

@@ -12,12 +12,17 @@ package objs {
 	 */
 	public class Basic extends FlxSprite {
 		
+		static private const minX:int = -2;
+		static private const maxX:int = 322;
+		static private const minY:int = -2;
+		static private const maxY:int = 242;
+		
 		static protected var sfx:SFX = SFX.self;
 		static protected var reg:Registry = Registry.self;
 		static protected var gfx:GFX = GFX.self;
 		
 		static protected const snakeSpeed:int = 50;
-		static protected const plSpeed:int = 67.5;
+		static public var plSpeed:int = 67.5;
 		static protected const climbDelta:Number = 0.425;
 		static protected const walkDelta:Number = 0.35;
 		static public const grav:int = 550;
@@ -26,48 +31,61 @@ package objs {
 		public var turnOnEdge:Boolean;
 		public var strid:String;
 		
+		protected var doEmitOnHit:Boolean;
+		
 		public function Basic() {
 			super();
 			isAnimSet = false;
 			turnOnEdge = true;
+			doEmitOnHit = true;
 		}
 		
 		override public function update():void {
-			if (!(wasTouching & RIGHT) && (touching & RIGHT)) {
-				x += width - 4;
-				last.x += width - 4;
-				reg.onHitEmitter.at(this);
-				reg.onHitEmitter.emitParticle();
-				x -= width - 4;
-				last.x -= width - 4;
-				sfx.fall();
-			}
-			else if (!(wasTouching & LEFT) && (touching & LEFT)) {
-				x -= 4;
-				last.x -= 4;
-				reg.onHitEmitter.at(this);
-				reg.onHitEmitter.emitParticle();
-				x +=  4;
-				last.x += 4;
-				sfx.fall();
-			}
-			else if (!(wasTouching & UP) && (touching & UP)) {
-				y -= 4;
-				last.y -= 4;
-				reg.onHitEmitter.at(this);
-				reg.onHitEmitter.emitParticle();
-				y += 4;
-				last.y += 4;
-				sfx.fall();
-			}
-			else if (acceleration.y == 0 && !(wasTouching & DOWN) && (touching & DOWN)) {
-				y += height - 4;
-				last.y += height - 4;
-				reg.onHitEmitter.at(this);
-				reg.onHitEmitter.emitParticle();
-				y -= height - 4;
-				last.y -= height - 4;
-				sfx.fall();
+			if (doEmitOnHit && reg.particlesEnabled) {
+				if (!(wasTouching & RIGHT) && (touching & RIGHT)) {
+					//if (doEmitOnHit && reg.particlesEnabled) {
+						x += width - 4;
+						last.x += width - 4;
+						reg.onHitEmitter.at(this);
+						reg.onHitEmitter.emitParticle();
+						x -= width - 4;
+						last.x -= width - 4;
+					//}
+					sfx.fall();
+				}
+				else if (!(wasTouching & LEFT) && (touching & LEFT)) {
+					//if (doEmitOnHit && reg.particlesEnabled) {
+						x -= 4;
+						last.x -= 4;
+						reg.onHitEmitter.at(this);
+						reg.onHitEmitter.emitParticle();
+						x +=  4;
+						last.x += 4;
+					//}
+					sfx.fall();
+				}
+				else if (!(wasTouching & UP) && (touching & UP)) {
+					//if (reg.particlesEnabled) {
+						y -= 4;
+						last.y -= 4;
+						reg.onHitEmitter.at(this);
+						reg.onHitEmitter.emitParticle();
+						y += 4;
+						last.y += 4;
+					//}
+					sfx.fall();
+				}
+				else if (acceleration.y == 0 && !(wasTouching & DOWN) && (touching & DOWN)) {
+					//if (doEmitOnHit && reg.particlesEnabled) {
+						y += height - 4;
+						last.y += height - 4;
+						reg.onHitEmitter.at(this);
+						reg.onHitEmitter.emitParticle();
+						y -= height - 4;
+						last.y -= height - 4;
+					//}
+					sfx.fall();
+				}
 			}
 			
 			if (velocity.x > 0)
@@ -75,26 +93,39 @@ package objs {
 			else if (velocity.x < 0)
 				facing = LEFT;
 			
-			if (x < 0)
-				if (this is Hero)
-					x = 0;
+			if (x < minX)
+				if (this is Hero) {
+					if (x < minX-16)
+						kill();
+				}
 				else
 					velocity.x = FlxU.abs(velocity.x);
-			else if (x + width > 320)
-				if (this is Hero)
-					x = 320 - width;
+			else if (x + width > maxX)
+				if (this is Hero) {
+					if (x +width > maxX+16)
+						kill();
+				}
 				else
 					velocity.x = -FlxU.abs(velocity.x);
-			if (y < 0)
-				if (this is Hero)
-					y = 0;
+			if (y < minY)
+				if (this is Hero) {
+					if (y < minY-16)
+						kill();
+				}
 				else
 					velocity.y = FlxU.abs(velocity.y);
-			else if (y + height > 240)
-				if (this is Hero)
-					y = 240 - height;
+			else if (y + height > maxY)
+				if (this is Hero) {
+					if (y+height > maxY+16)
+						kill();
+				}
 				else
 					velocity.y = -FlxU.abs(velocity.y);
+		}
+		
+		override public function reset(X:Number, Y:Number):void {
+			super.reset(X, Y);
+			strid = "";
 		}
 		
 		public function recycle(argc:int, argv:Array):void {
@@ -104,9 +135,6 @@ package objs {
 				strid = argv[3] as String;
 			else
 				strid = "";
-			
-			if (strid.indexOf("ev") == 0)
-				visible = false;
 		}
 		
 		public function fakeKill():void {

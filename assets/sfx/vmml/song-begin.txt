@@ -1,0 +1,49 @@
+
+t180
+
+// [bass]
+@2 o3 l8 $
+
+>g<cccrccr >a<dddrddr
+>g<cccrccr edcdc>bar
+
+; // [/bass]
+
+// [melody]
+
+#TABLE 2 { (100, 48)8, (64, 12)8 };
+#TABLE 3 { 50, 24, 44, 20, 40, 16, 36, 12, 32, 8, 28, 4, 24, 0 };
+
+@0 o6 l4 $
+
+[r1]8
+na2 d2a2 r4 g8a8gfg2 e2 na3 l8 agfgfedr l4
+na2 d2a2 r4 g8a8gab2 g2 na3 l8 bagargfr l4
+na2 d2a2 r4 g8a8gfg2 d2 na3 l8 agfgfedr l4
+na2 >a2<e2 r4 ed>b<c2r8 na3 l8 >ab<cr>b<cdrcde l4
+
+; // [melody]
+
+// [percussion]
+
+#H=g;
+#S=b;
+#K=<g>;
+#C=na1 q6 g4 na0 q1;
+
+#TABLE 0 { 128};
+#TABLE 1 { 60, 60, 56, 56, 52, 52, 48, 48, 44, 44, 40, 40, 36, 36, 32, 32, 28, 28, 24, 24 };
+
+// HiHat + Crash
+@1 q1 l8 v6 na0
+HHHHr4 $
+l16HHl8HHHHHr4
+
+;
+
+// Snare + Kick
+@1 q1 l16 $
+
+r2Sr4.r;
+
+;// [percussion]

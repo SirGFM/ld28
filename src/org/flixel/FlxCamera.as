@@ -98,7 +98,7 @@ package org.flixel
 		public var buffer:BitmapData;
 		/**
 		 * The natural background color of the camera. Defaults to FlxG.bgColor.
-		 * NOTE: can be transparent for crazy FX!
+		 * N.OTE: can be transparent for crazy FX!
 		 */
 		public var bgColor:uint;
 		/**
@@ -651,7 +651,7 @@ package org.flixel
 		 * Fetches a reference to the Flash <code>Sprite</code> object
 		 * that contains the camera display in the Flash display list.
 		 * Uses include 3D projection, advanced display list modification, and more.
-		 * NOTE: We don't recommend modifying this directly unless you are
+		 * N.OTE: We don't recommend modifying this directly unless you are
 		 * fairly experienced.  For simple changes to the camera display,
 		 * like scaling, rotation, and color tinting, we recommend
 		 * using the existing <code>FlxCamera</code> variables.
@@ -701,6 +701,10 @@ package org.flixel
 				_flashSprite.x = x + _flashOffsetX + _fxShakeOffset.x;
 				_flashSprite.y = y + _flashOffsetY + _fxShakeOffset.y;
 			}
+		}
+		
+		public function get fxActive():Boolean {
+			return (_fxFlashAlpha > 0.0) || (_fxFadeAlpha > 0.0) || (_fxShakeDuration > 0);
 		}
 	}
 }

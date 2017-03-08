@@ -1,0 +1,42 @@
+t170 
+
+// [melody]
+l8 %1 @4
+
+$
+o6 [r1]8
+
+>e2cegb4. r2.
+<c2>bga4e4. r2 r8
+c>ga<c4>gag<d r2. r8
+edee4>a<deg r4. e r4.
+
+e2cegb4. r2.
+<c2>bga4<e4. r2 r8
+>[c>g|a<]3
+[dc>b<]df
+edee4>a<de
+g r4. e r4.
+// [/melody]
+;
+
+// [bass]
+l8 o4 %1 @8
+
+$ [a<eee>]4 [g<ddd>]4 [f<ccc>]2 [g<ddd>]2 [a<eee>]4
+// [/bass]
+;
+
+// [percurssion]
+// bass  // snare
+#C=o7 a; #D=o5 a;
+
+#E=CrDr CrCr CrDr Drrr;
+#F=CrDr rrDr CrDr DrCr;
+#G=Crrr Drrr CrDr Drrr;
+#H=CrDr rrDr CrDr DDCr;
+
+l16 %1 @9 q1
+$ GGGG EEEF GGGG EEEF GGGG EEEH
+
+// [/percurssion]

@@ -217,7 +217,7 @@ package org.flixel
 		 * 
 		 * @param	Silent	Whether or not it should beep.
 		 */
-		internal function showSoundTray(Silent:Boolean=false):void
+		protected function showSoundTray(Silent:Boolean=false):void
 		{
 			if(!Silent)
 				FlxG.play(SndBeep);
@@ -796,6 +796,16 @@ package org.flixel
 			_focus.addChild(logo);
 
 			addChild(_focus);
+		}
+		
+		public function gameAddDebug():void {
+			if (!FlxG.debug && !forceDebugger) {
+				_debugger = new FlxDebugger(FlxG.width*FlxCamera.defaultZoom,FlxG.height*FlxCamera.defaultZoom);
+				addChild(_debugger);
+				
+				FlxG.debug = true;
+				forceDebugger = true;
+			}
 		}
 	}
 }

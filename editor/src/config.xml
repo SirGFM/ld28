@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<flex-config>
+	<compiler>
+		
+		<define append="true">
+			<name>Game::version</name>
+			<value>"1.3.2"</value>
+		</define>
+		<define append="true">
+			<name>Game::debug</name>
+			<value>false</value>
+		</define>
+		<!-- Whether the filters should be enabled -->
+		<define append="true">
+			<name>Game::filterEnabled</name>
+			<value>false</value>
+		</define>
+		<!-- Whether the logo "Made by GFM" should be displayed -->
+		<define append="true">
+			<name>Game::logoEnabled</name>
+			<value>false</value>
+		</define>
+		<!-- Whether sounds are enabled -->
+		<define append="true">
+			<name>Game::sfxEnabled</name>
+			<value>true</value>
+		</define>
+		<!-- Whether that ugly Twitter icon is enabled -->
+		<define append="true">
+			<name>Game::twitterIconEnabled</name>
+			<value>false</value>
+		</define>
+		<!-- Whether that ugly mute icon is enabled -->
+		<define append="true">
+			<name>Game::muteIconEnabled</name>
+			<value>false</value>
+		</define>
+		<!-- Whether the game can enter full-screen mode if F12 is pressed -->
+		<define append="true">
+			<name>Game::fullscreenEnabled</name>
+			<value>true</value>
+		</define>
+		<!-- Whether the game recorder (activated by holding SHIFT down and saved with F2) is enabled -->
+		<define append="true">
+			<name>Game::camRecorderEnabled</name>
+			<value>false</value>
+		</define>
+		
+		<!-- Whether the Newgrounds API is to be used -->
+		<define append="true">
+			<name>Game::NG_API</name>
+			<value>true</value>
+		</define>
+		
+		<!-- Tile's dimension -->
+		<define append="true">
+			<name>CONST::TILED</name>
+			<value>16</value>
+		</define>
+		<!-- Tileset's width in tiles -->
+		<define append="true">
+			<name>CONST::TILESETW</name>
+			<value>8</value>
+		</define>
+		
+		<!-- Autotile's first tile -->
+		<define append="true">
+			<name>CONST::AUTOTILE</name>
+			<value>47</value>
+		</define>
+		<!-- Autotile's corners first tile -->
+		<define append="true">
+			<name>CONST::CORNER</name>
+			<value>63</value>
+		</define>
+		
+		<define append="true">
+			<name>Game::release</name>
+			<value>!Game::debug</value>
+		</define>
+		
+	</compiler>
+</flex-config>

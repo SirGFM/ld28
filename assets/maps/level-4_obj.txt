@@ -1,6 +1,0 @@
-objs.helpers.Exit,-1,11,1,3,5
-objs.Help,0,12,left
-objs.Snake,6,13,right
-objs.Snake,11,13,right
-objs.helpers.Turn,13,13,left
-objs.Hero,19,13
